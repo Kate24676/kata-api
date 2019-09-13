@@ -21,9 +21,6 @@ app.get('/strings/first-characters/:parameter', (req, res) => {
   res.json({ result: `${parameter}` });
 });
 
-app.get('/strings/first-characters/:parameter', (req) => {
-  console.log(req.query.substring);
-});
 
 app.listen(3000);
 
