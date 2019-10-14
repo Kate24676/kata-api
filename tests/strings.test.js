@@ -60,10 +60,10 @@ describe('/strings', () => {
         });
     });
 
-    xit('returns the first n character of the string when passed a query parameter', (done) => {
+    it('returns the first n character of the string when passed a query parameter', (done) => {
       chai.request(server)
         .get('/strings/first-characters/sd32fg45')
-        .query({ length: 4 })
+        .query({ length: 4 })// ?length=4
         .end((err, res) => {
           expect(err).to.equal(null);
           expect(res.status).to.equal(200);
